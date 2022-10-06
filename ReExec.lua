@@ -1,3 +1,11 @@
+-- A Roblox module for handling functions and signals
+
+-- Usage :
+--   ReExec.new(<string> HandlerName) -- Creates or a handler with the name HandlerName, returns existing handler with the name HandlerName if exists
+--   Handler:Add(<RBXScriptConnection, function> Object) -- Adds the object for the Handler to handle
+--   Handler.AddIndex = <RBXScriptConnection, function> Object -- Handler:Add but uses the __newindex method
+--   Handler:Cleanup(<void>) -- Cleans up all object the current Handler is handling
+
 local ReExec = {}
 local Existing = {}
 ReExec.__index = ReExec
