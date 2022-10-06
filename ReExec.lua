@@ -6,6 +6,10 @@
 --   Handler.AddIndex = <RBXScriptConnection, function> Object -- Handler:Add but uses the __newindex method
 --   Handler:Cleanup(<void>) -- Cleans up all object the current Handler is handling
 
+if getgenv().ReExec then
+    return
+end
+
 local ReExec = {}
 local Existing = {}
 ReExec.__index = ReExec
