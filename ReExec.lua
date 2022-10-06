@@ -2,7 +2,6 @@ local ReExec = {}
 local Existing = {}
 ReExec.__index = ReExec
 ReExec.__newindex = newcclosure(function(self, key, value)
-	print(key)
 	if self ~= ReExec and key == "AddIndex" then	
 		self:Add(value)
 	end
